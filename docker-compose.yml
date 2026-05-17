@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    container_name: stores_db
+    environment:
+      POSTGRES_USER: me
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: stores
+    ports:
+      - '5445:5432'
+    volumes:
+      - stores_data:/var/lib/postgresql/data
+
+  service:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: stores_service
+    ports:
+      - '8010:8000'
+      - '9010:9000'
+    depends_on:
+      - db
+    environment:
+      - AUTOMIGRATE=true
+    command: ["./app", "-conf", "config.yaml"]
+
+volumes:
+  stores_data:
