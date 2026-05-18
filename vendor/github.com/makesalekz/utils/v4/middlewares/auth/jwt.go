@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	u_auth "gitlab.calendaria.team/services/utils/v2/auth"
-	u_jwt "gitlab.calendaria.team/services/utils/v4/jwt"
+	u_auth "github.com/makesalekz/utils/v2/auth"
+	u_jwt "github.com/makesalekz/utils/v4/jwt"
 
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/go-kratos/kratos/v2/metadata"

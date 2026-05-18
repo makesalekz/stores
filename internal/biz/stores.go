@@ -3,10 +3,10 @@ package biz
 import (
 	"context"
 
-	stores_v1 "gitlab.calendaria.team/services/stores/api/stores/v1"
-	"gitlab.calendaria.team/services/stores/ent"
-	"gitlab.calendaria.team/services/stores/internal/data"
-	utils_v1 "gitlab.calendaria.team/services/utils/api/utils/v1"
+	stores_v1 "github.com/makesalekz/stores/api/stores/v1"
+	"github.com/makesalekz/stores/ent"
+	"github.com/makesalekz/stores/internal/data"
+	utils_v1 "github.com/makesalekz/utils/api/utils/v1"
 
 	"github.com/go-kratos/kratos/v2/log"
 )

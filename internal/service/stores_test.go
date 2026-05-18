@@ -8,13 +8,13 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	v1 "gitlab.calendaria.team/services/stores/api/stores/v1"
-	"gitlab.calendaria.team/services/stores/ent"
-	"gitlab.calendaria.team/services/stores/internal/biz"
-	"gitlab.calendaria.team/services/stores/internal/data/mock"
-	"gitlab.calendaria.team/services/stores/internal/service"
-	"gitlab.calendaria.team/services/utils/v2/auth"
-	"gitlab.calendaria.team/services/utils/v2/zap"
+	v1 "github.com/makesalekz/stores/api/stores/v1"
+	"github.com/makesalekz/stores/ent"
+	"github.com/makesalekz/stores/internal/biz"
+	"github.com/makesalekz/stores/internal/data/mock"
+	"github.com/makesalekz/stores/internal/service"
+	"github.com/makesalekz/utils/v2/auth"
+	"github.com/makesalekz/utils/v2/zap"
 )
 
 func beforeStoresTest(t *testing.T) (

@@ -228,6 +228,17 @@ github.com/imdario/mergo
 github.com/lib/pq
 github.com/lib/pq/oid
 github.com/lib/pq/scram
+# github.com/makesalekz/utils v0.3.21 => ../utils
+## explicit; go 1.21
+github.com/makesalekz/utils/api/utils/v1
+github.com/makesalekz/utils/v1/config
+github.com/makesalekz/utils/v1/jwt
+github.com/makesalekz/utils/v2/auth
+github.com/makesalekz/utils/v2/zap
+github.com/makesalekz/utils/v4/config
+github.com/makesalekz/utils/v4/jwt
+github.com/makesalekz/utils/v4/middlewares/auth
+github.com/makesalekz/utils/v4/tracing
 # github.com/mattn/go-colorable v0.1.13
 ## explicit; go 1.15
 github.com/mattn/go-colorable
@@ -266,17 +277,6 @@ github.com/zclconf/go-cty/cty/set
 # github.com/zclconf/go-cty-yaml v1.1.0
 ## explicit; go 1.17
 github.com/zclconf/go-cty-yaml
-# gitlab.calendaria.team/services/utils v0.3.21 => ../utils
-## explicit; go 1.21
-gitlab.calendaria.team/services/utils/api/utils/v1
-gitlab.calendaria.team/services/utils/v1/config
-gitlab.calendaria.team/services/utils/v1/jwt
-gitlab.calendaria.team/services/utils/v2/auth
-gitlab.calendaria.team/services/utils/v2/zap
-gitlab.calendaria.team/services/utils/v4/config
-gitlab.calendaria.team/services/utils/v4/jwt
-gitlab.calendaria.team/services/utils/v4/middlewares/auth
-gitlab.calendaria.team/services/utils/v4/tracing
 # go.opentelemetry.io/otel v1.24.0
 ## explicit; go 1.20
 go.opentelemetry.io/otel
@@ -506,4 +506,4 @@ google.golang.org/protobuf/types/known/wrapperspb
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
-# gitlab.calendaria.team/services/utils => ../utils
+# github.com/makesalekz/utils => ../utils

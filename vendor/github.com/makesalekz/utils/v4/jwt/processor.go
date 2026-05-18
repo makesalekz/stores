@@ -4,16 +4,24 @@ import (
 	"context"
 	"fmt"
 
+	v1 "github.com/makesalekz/utils/v1/jwt"
+	"github.com/makesalekz/utils/v4/config"
+
 	"github.com/go-kratos/kratos/v2/middleware/auth/jwt"
-	"gitlab.calendaria.team/services/utils/v1/config"
 )
+
+type IJwtProcessor interface {
+	GetSecret() []byte
+	GetClaimsFromContext(ctx context.Context) (ITenantClaims, bool)
+	GetUserIdFromContext(ctx context.Context) int64
+}
 
 type JwtProcessor struct {
 	jwtSecret []byte
 }
 
 // NewJwtProcessor .
-func NewJwtProcessor(c *config.Config) (*JwtProcessor, error) {
+func NewJwtProcessor(c config.IConfig) (IJwtProcessor, error) {
 	secret, err := c.ReadGlobalSecretsFor(context.Background(), "jwt")
 	if err != nil {
 		return nil, fmt.Errorf("jwt secret not found, error: %w", err)
@@ -28,15 +36,20 @@ func (j *JwtProcessor) GetSecret() []byte {
 	return j.jwtSecret
 }
 
-func (j *JwtProcessor) GetClaimsFromContext(ctx context.Context) (*TenantClaims, bool) {
+func (j *JwtProcessor) GetClaimsFromContext(ctx context.Context) (ITenantClaims, bool) {
 	token, ok := jwt.FromContext(ctx)
 	if !ok {
 		return nil, false
 	}
 
-	claims, ok := token.(*TenantClaims)
+	var claims ITenantClaims
+
+	claims, ok = token.(*v1.TenantClaims)
 	if !ok {
-		return nil, false
+		claims, ok = token.(*TenantClaims) // v2.TenantClaims
+		if !ok {
+			return nil, false
+		}
 	}
 
 	return claims, true

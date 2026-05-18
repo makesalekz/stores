@@ -9,7 +9,7 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"gitlab.calendaria.team/services/stores/ent/store"
+	"github.com/makesalekz/stores/ent/store"
 )
 
 // Store is the model entity for the Store schema.

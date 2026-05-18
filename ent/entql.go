@@ -3,7 +3,7 @@
 package ent
 
 import (
-	"gitlab.calendaria.team/services/stores/ent/store"
+	"github.com/makesalekz/stores/ent/store"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

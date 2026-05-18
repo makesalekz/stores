@@ -11,8 +11,8 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"gitlab.calendaria.team/services/stores/ent/predicate"
-	"gitlab.calendaria.team/services/stores/ent/store"
+	"github.com/makesalekz/stores/ent/predicate"
+	"github.com/makesalekz/stores/ent/store"
 )
 
 const (

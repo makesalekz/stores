@@ -11,7 +11,7 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/stores/ent/store"
+	"github.com/makesalekz/stores/ent/store"
 )
 
 // StoreCreate is the builder for creating a Store entity.

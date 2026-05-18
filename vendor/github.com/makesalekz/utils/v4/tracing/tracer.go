@@ -3,7 +3,7 @@ package tracing
 import (
 	"context"
 
-	u_config "gitlab.calendaria.team/services/utils/v4/config"
+	u_config "github.com/makesalekz/utils/v4/config"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"

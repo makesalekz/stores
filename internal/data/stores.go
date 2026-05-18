@@ -3,9 +3,9 @@ package data
 import (
 	"context"
 
-	"gitlab.calendaria.team/services/stores/ent"
-	"gitlab.calendaria.team/services/stores/ent/store"
-	utils_v1 "gitlab.calendaria.team/services/utils/api/utils/v1"
+	"github.com/makesalekz/stores/ent"
+	"github.com/makesalekz/stores/ent/store"
+	utils_v1 "github.com/makesalekz/utils/api/utils/v1"
 )
 
 type StoreDto struct {

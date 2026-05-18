@@ -1,4 +1,4 @@
-module gitlab.calendaria.team/services/stores
+module github.com/makesalekz/stores
 
 go 1.23.1
 
@@ -8,8 +8,8 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/google/wire v0.7.0
 	github.com/lib/pq v1.10.9
+	github.com/makesalekz/utils v0.3.21
 	github.com/stretchr/testify v1.9.0
-	gitlab.calendaria.team/services/utils v0.3.21
 	go.uber.org/automaxprocs v1.6.0
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.34.1
@@ -91,4 +91,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace gitlab.calendaria.team/services/utils => ../utils
+replace github.com/makesalekz/utils => ../utils

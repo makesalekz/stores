@@ -11,8 +11,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"gitlab.calendaria.team/services/stores/ent/predicate"
-	"gitlab.calendaria.team/services/stores/ent/store"
+	"github.com/makesalekz/stores/ent/predicate"
+	"github.com/makesalekz/stores/ent/store"
 )
 
 // StoreQuery is the builder for querying Store entities.

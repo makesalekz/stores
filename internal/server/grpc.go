@@ -1,12 +1,12 @@
 package server
 
 import (
-	v1 "gitlab.calendaria.team/services/stores/api/stores/v1"
-	"gitlab.calendaria.team/services/stores/internal/conf"
-	"gitlab.calendaria.team/services/stores/internal/service"
-	u_jwt "gitlab.calendaria.team/services/utils/v4/jwt"
-	u_auth "gitlab.calendaria.team/services/utils/v4/middlewares/auth"
-	u_tracing "gitlab.calendaria.team/services/utils/v4/tracing"
+	v1 "github.com/makesalekz/stores/api/stores/v1"
+	"github.com/makesalekz/stores/internal/conf"
+	"github.com/makesalekz/stores/internal/service"
+	u_jwt "github.com/makesalekz/utils/v4/jwt"
+	u_auth "github.com/makesalekz/utils/v4/middlewares/auth"
+	u_tracing "github.com/makesalekz/utils/v4/tracing"
 
 	"github.com/go-kratos/kratos/v2/middleware/metadata"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"

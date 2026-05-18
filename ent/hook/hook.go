@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"gitlab.calendaria.team/services/stores/ent"
+	"github.com/makesalekz/stores/ent"
 )
 
 // The StoreFunc type is an adapter to allow the use of ordinary
