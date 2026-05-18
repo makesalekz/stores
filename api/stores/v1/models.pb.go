@@ -178,8 +178,8 @@ const file_api_stores_v1_models_proto_rawDesc = "" +
 	"updated_at\x18\f \x01(\tR\tupdatedAtB\x06\n" +
 	"\x04_latB\x06\n" +
 	"\x04_lonB\x11\n" +
-	"\x0f_responsible_idBM\n" +
-	"\tstores.v1P\x01Z>github.com/makesalekz/stores/api/stores/v1;stores_v1b\x06proto3"
+	"\x0f_responsible_idBC\n" +
+	"\tstores.v1P\x01Z4github.com/makesalekz/stores/api/stores/v1;stores_v1b\x06proto3"
 
 var (
 	file_api_stores_v1_models_proto_rawDescOnce sync.Once
