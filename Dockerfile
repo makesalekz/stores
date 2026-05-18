@@ -1,15 +1,21 @@
-FROM golang:1.23 AS builder
+FROM golang:latest AS builder
 
+RUN apk add --no-cache git make protobuf || apt-get update && apt-get install -y git make protobuf-compiler || true
+
+COPY . /src
 WORKDIR /src
-COPY . .
-RUN go mod download
-RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o /app ./cmd/app/
 
-FROM alpine:3.19
-RUN apk --no-cache add ca-certificates
-COPY --from=builder /app /app
-COPY configs/config.local.yaml /config.yaml
+RUN touch .env && CGO_ENABLED=0 go build -mod=vendor -o bin/app ./cmd/app/
+
+FROM alpine:3.21
+
+RUN apk add --no-cache ca-certificates
+
+COPY --from=builder /src/bin/app /app/app
+COPY --from=builder /src/configs/ /app/configs/
+
+WORKDIR /app
 
 EXPOSE 8000 9000
-ENTRYPOINT ["/app"]
-CMD ["-conf", "/config.yaml"]
+
+CMD ["./app", "-conf", "configs/config.dev.yaml"]
